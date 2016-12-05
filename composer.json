@@ -1,0 +1,43 @@
+{
+    "name": "wyrihaximus/cake-di",
+    "type":"cakephp-plugin",
+    "description": "Ratchet websockets integration plugin for CakePHP",
+    "license": "MIT",
+    "keywords": [
+        "cakephp",
+        "dependency-injection",
+        "cakephp3"
+    ],
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com",
+            "homepage": "https://wyrihaximus.net/"
+        }
+    ],
+    "require": {
+        "php": "^5.5.0||^7.0",
+        "cakephp/cakephp": "^3.3",
+        "doctrine/annotations": "^1.3",
+        "doctrine/cache": "^1.6",
+        "php-di/php-di": "^5.4"
+    },
+    "require-dev": {
+        "cakephp/debug_kit": "^3.0",
+        "phpunit/phpunit": "^5.0||^4.8",
+        "squizlabs/php_codesniffer": "^1.5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "WyriHaximus\\Cake\\DI\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WyriHaximus\\Cake\\DI\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
