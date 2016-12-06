@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types=1);
+
 namespace WyriHaximus\Cake\DI\Routing\Filter;
 
 use Cake\Core\App;
@@ -34,8 +35,10 @@ class ControllerFactoryFilter extends ParentFactory
      * @param \Cake\Network\Response $response Response for the controller.
      * @return mixed name of controller if not loaded, or object if loaded
      */
+    // @codingStandardsIgnoreStart
     protected function _getController($request, $response)
     {
+        // @codingStandardsIgnoreEnd
         $pluginPath = $controller = null;
         $namespace = 'Controller';
         if (!empty($request->params['plugin'])) {

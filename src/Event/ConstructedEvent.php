@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * This file is part of CakeDI.
@@ -31,7 +31,7 @@ final class ConstructedEvent extends Event
     /**
      * @return ContainerInterface
      */
-    public function getContainer()
+    public function getContainer(): ContainerInterface
     {
         return $this->data()['container'];
     }
