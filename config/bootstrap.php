@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 use Cake\Routing\DispatcherFactory;
 use WyriHaximus\Cake\DI\Routing\Filter\ControllerFactoryFilter;
