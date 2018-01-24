@@ -10,6 +10,8 @@
 namespace WyriHaximus\Cake\DI\Event;
 
 use Cake\Event\EventListenerInterface;
+use function DI\factory;
+use DI\Scope;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Interop\Container\ContainerInterface;
 use RecursiveDirectoryIterator;
@@ -67,7 +69,7 @@ final class ConstructedControllersListener implements EventListenerInterface
 
     protected function shareController(string $class)
     {
-        $this->container->set($class, function () use ($class) {
+        $this->container->set($class, factory(function () use ($class) {
             $controller = new $class();
 
             $reader = new AnnotationReader();
@@ -89,6 +91,6 @@ final class ConstructedControllersListener implements EventListenerInterface
             }
 
             return $controller;
-        });
+        })->scope(Scope::PROTOTYPE));
     }
 }
