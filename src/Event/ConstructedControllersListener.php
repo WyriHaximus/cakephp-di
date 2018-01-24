@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types=1);
+
 /**
  * This file is part of CakeDI.
  *
@@ -29,7 +30,7 @@ final class ConstructedControllersListener implements EventListenerInterface
     /**
      * @return array
      */
-    public function implementedEvents()
+    public function implementedEvents(): array
     {
         return [
             ConstructedEvent::EVENT => 'constructed',

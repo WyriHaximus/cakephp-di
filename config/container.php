@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 use Cake\Core\Configure;
 use Cake\Event\EventManager;
