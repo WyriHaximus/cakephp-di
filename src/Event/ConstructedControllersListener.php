@@ -10,6 +10,8 @@
  */
 namespace WyriHaximus\Cake\DI\Event;
 
+use Cake\Core\App;
+use Cake\Core\Plugin;
 use Cake\Event\EventListenerInterface;
 use function DI\factory;
 use DI\Scope;
@@ -44,8 +46,24 @@ final class ConstructedControllersListener implements EventListenerInterface
     {
         $this->container = $event->getContainer();
 
-        $path = APP . 'Controller' . DS;
-        $namespace = 'App\Controller';
+        $this->findControllers();
+        foreach (Plugin::loaded() as $plugin) {
+            if (!Plugin::loaded($plugin)) {
+                continue;
+            }
+
+            $this->findControllers($plugin);
+        }
+    }
+
+    private function findControllers(string $plugin = null)
+    {
+        $path = current(App::path('Controller', $plugin));
+
+        if (!file_exists($path)) {
+            return;
+        }
+
         $directory = new RecursiveDirectoryIterator($path);
         $directory = new RecursiveIteratorIterator($directory);
 
@@ -54,11 +72,23 @@ final class ConstructedControllersListener implements EventListenerInterface
                 continue;
             }
 
+            if ($node->getExtension() !== 'php') {
+                continue;
+            }
+
             $file = substr($node->getPathname(), strlen($path));
             $file = ltrim($file, DIRECTORY_SEPARATOR);
             $file = rtrim($file, '.php');
 
-            $class = $namespace . '\\' . str_replace(DIRECTORY_SEPARATOR, '\\', $file);
+            if ($file === 'AppController') {
+                continue;
+            }
+
+            $class = App::className($plugin === null ? '' : $plugin . '.' . $file, 'Controller');
+
+            if (!$class) {
+                continue;
+            }
 
             if (!class_exists($class)) {
                 continue;
