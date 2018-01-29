@@ -45,10 +45,6 @@ class ControllerFactoryFilter extends ParentFactory
             $pluginPath = $request->params['plugin'] . '.';
         }
 
-        if ($pluginPath) {
-            return parent::_getController($request, $response);
-        }
-
         if (!empty($request->params['controller'])) {
             $controller = $request->params['controller'];
         }
