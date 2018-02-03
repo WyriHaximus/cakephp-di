@@ -84,7 +84,7 @@ final class ConstructedControllersListener implements EventListenerInterface
                 continue;
             }
 
-            $class = App::className($plugin === null ? '' : $plugin . '.' . $file, 'Controller');
+            $class = App::className(($plugin === null ? '' : $plugin . '.') . $file, 'Controller');
 
             if (!$class) {
                 continue;
