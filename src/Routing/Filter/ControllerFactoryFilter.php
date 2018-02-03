@@ -5,7 +5,9 @@ namespace WyriHaximus\Cake\DI\Routing\Filter;
 use Cake\Core\App;
 use Cake\Utility\Inflector;
 use Cake\Routing\Filter\ControllerFactoryFilter as ParentFactory;
+use Doctrine\Common\Annotations\AnnotationReader;
 use Interop\Container\ContainerInterface;
+use WyriHaximus\Cake\DI\Annotations\Inject;
 
 /**
  * A dispatcher filter that builds the controller to dispatch
@@ -60,15 +62,31 @@ class ControllerFactoryFilter extends ParentFactory
             return false;
         }
 
-        $instance = $this->container->get($className);
+        $instance = new $className($request, $response);
         if (method_exists($instance, 'viewBuilder')) {
             $instance->viewBuilder();
         } else {
             $instance->viewPath = null;
         }
-        $instance->name = $controller;
-        $instance->setRequest($request);
-        $instance->response = $response;
+
+        $reader = new AnnotationReader();
+        $reflectionClass = new \ReflectionClass($className);
+
+        foreach ($reflectionClass->getMethods() as $method) {
+            if (!is_a($reader->getMethodAnnotation($method, Inject::class), Inject::class)) {
+                continue;
+            }
+
+            $params = [];
+            foreach ($method->getParameters() as $parameter) {
+                $params[] = $this->container->get((string)$parameter->getType());
+            }
+
+            $method = $method->getName();
+
+            $instance->$method(...$params);
+        }
+
         return $instance;
     }
 
