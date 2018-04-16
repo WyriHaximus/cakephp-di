@@ -3,7 +3,9 @@
 namespace WyriHaximus\Cake\DI\Routing\Filter;
 
 use Cake\Core\App;
-use Cake\Routing\Filter\ControllerFactoryFilter as ParentFactory;
+use Cake\Http\ControllerFactory as ParentFactory;
+use Cake\Http\Response;
+use Cake\Http\ServerRequest;
 use Cake\Utility\Inflector;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Interop\Container\ContainerInterface;
@@ -16,22 +18,20 @@ use WyriHaximus\Cake\DI\Annotations\Inject;
  * This filter resolves the request parameters into a controller
  * instance and attaches it to the event object.
  */
-class ControllerFactoryFilter extends ParentFactory
+class ControllerFactory extends ParentFactory
 {
     /**
      * @var ContainerInterface
      */
     private $container;
 
-    /**
-     * Priority is set high to allow other filters to be called first.
-     *
-     * @var int
-     */
-    protected $priority = 50;
+    public function __construct()
+    {
+        $this->container = require dirname(dirname(__DIR__)) . DS . 'config' . DS . 'container.php';
+    }
 
     // @codingStandardsIgnoreStart
-    protected function _getController($request, $response)
+    public function create(ServerRequest $request, Response $response)
     {
         // @codingStandardsIgnoreEnd
         $pluginPath = $controller = null;
@@ -81,13 +81,5 @@ class ControllerFactoryFilter extends ParentFactory
         }
 
         return $instance;
-    }
-
-    /**
-     * @param ContainerInterface $container
-     */
-    public function setContainer(ContainerInterface $container)
-    {
-        $this->container = $container;
     }
 }
