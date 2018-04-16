@@ -3,8 +3,8 @@
 namespace WyriHaximus\Cake\DI\Routing\Filter;
 
 use Cake\Core\App;
-use Cake\Utility\Inflector;
 use Cake\Routing\Filter\ControllerFactoryFilter as ParentFactory;
+use Cake\Utility\Inflector;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Interop\Container\ContainerInterface;
 use WyriHaximus\Cake\DI\Annotations\Inject;
@@ -30,28 +30,21 @@ class ControllerFactoryFilter extends ParentFactory
      */
     protected $priority = 50;
 
-    /**
-     * Get controller to use, either plugin controller or application controller
-     *
-     * @param \Cake\Network\Request $request Request object
-     * @param \Cake\Network\Response $response Response for the controller.
-     * @return mixed name of controller if not loaded, or object if loaded
-     */
     // @codingStandardsIgnoreStart
     protected function _getController($request, $response)
     {
         // @codingStandardsIgnoreEnd
         $pluginPath = $controller = null;
         $namespace = 'Controller';
-        if (!empty($request->params['plugin'])) {
-            $pluginPath = $request->params['plugin'] . '.';
+        if (!empty($request->getParam('plugin'))) {
+            $pluginPath = $request->getParam('plugin') . '.';
         }
 
-        if (!empty($request->params['controller'])) {
-            $controller = $request->params['controller'];
+        if (!empty($request->getParam('controller'))) {
+            $controller = $request->getParam('controller');
         }
-        if (!empty($request->params['prefix'])) {
-            $namespace .= '/' . Inflector::camelize($request->params['prefix']);
+        if (!empty($request->getParam('prefix'))) {
+            $namespace .= '/' . Inflector::camelize($request->getParam('prefix'));
         }
         $className = false;
         if ($pluginPath . $controller) {
