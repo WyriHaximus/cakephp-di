@@ -33,6 +33,6 @@ final class ConstructedEvent extends Event
      */
     public function getContainer(): ContainerInterface
     {
-        return $this->data()['container'];
+        return $this->getData('container');
     }
 }
