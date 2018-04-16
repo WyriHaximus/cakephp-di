@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace WyriHaximus\Cake\DI\Routing\Filter;
+namespace WyriHaximus\Cake\DI\Http;
 
 use Cake\Core\App;
 use Cake\Http\ControllerFactory as ParentFactory;
