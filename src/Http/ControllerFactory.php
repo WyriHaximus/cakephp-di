@@ -25,9 +25,9 @@ class ControllerFactory extends ParentFactory
      */
     private $container;
 
-    public function __construct()
+    public function __construct(ContainerInterface $container = null)
     {
-        $this->container = require dirname(dirname(__DIR__)) . DS . 'config' . DS . 'container.php';
+        $this->container = $container ?? require dirname(dirname(__DIR__)) . DS . 'config' . DS . 'container.php';
     }
 
     // @codingStandardsIgnoreStart
