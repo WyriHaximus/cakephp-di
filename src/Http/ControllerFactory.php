@@ -52,7 +52,7 @@ class ControllerFactory extends ParentFactory
         }
 
         if (!$className) {
-            return false;
+            $this->missingController($request);
         }
 
         $instance = new $className($request, $response);
