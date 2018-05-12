@@ -8,7 +8,7 @@ use Cake\Http\Response;
 use Cake\Http\ServerRequest;
 use Cake\Utility\Inflector;
 use Doctrine\Common\Annotations\AnnotationReader;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use WyriHaximus\Cake\DI\Annotations\Inject;
 
 /**

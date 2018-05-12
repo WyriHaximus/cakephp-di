@@ -16,7 +16,7 @@ use Cake\Event\EventListenerInterface;
 use function DI\factory;
 use DI\Scope;
 use Doctrine\Common\Annotations\AnnotationReader;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionClass;

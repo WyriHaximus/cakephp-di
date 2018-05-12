@@ -11,7 +11,7 @@
 namespace WyriHaximus\Cake\DI\Event;
 
 use Cake\Event\Event;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 final class ConstructedEvent extends Event
 {
