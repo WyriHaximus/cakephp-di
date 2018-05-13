@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-use Cake\Core\Configure;
 use Cake\Event\EventManager;
 use DI\ContainerBuilder;
+use PHPDIDefinitions\DefinitionsGatherer;
 use WyriHaximus\Cake\DI\Event\ConstructedEvent;
 
 return (function () {
-    $container = (new ContainerBuilder())->addDefinitions(Configure::read('WyriHaximus.DI.definitions.path'))->build();
+    $container = (new ContainerBuilder())->addDefinitions(DefinitionsGatherer::gather())->build();
     EventManager::instance()->dispatch(ConstructedEvent::create($container));
     return $container;
 })();
