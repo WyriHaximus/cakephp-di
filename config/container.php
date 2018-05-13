@@ -6,7 +6,7 @@ use PHPDIDefinitions\DefinitionsGatherer;
 use WyriHaximus\Cake\DI\Event\ConstructedEvent;
 
 return (function () {
-    $container = (new ContainerBuilder())->addDefinitions(DefinitionsGatherer::gather())->build();
+    $container = (new ContainerBuilder())->addDefinitions(iterator_to_array(DefinitionsGatherer::gather()))->build();
     EventManager::instance()->dispatch(ConstructedEvent::create($container));
     return $container;
 })();
