@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7514dd1b756188d17e0d640f96ec881",
+    "content-hash": "dd32cc16172d668b5e7eb5bf116ad7fc",
     "packages": [
         {
             "name": "aura/intl",
@@ -600,22 +600,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI-Definitions/definitions-gatherer.git",
-                "reference": "108b988aa5854805e1f0cb0e35f6e2eb501a77fb"
+                "reference": "221316c6e143696fbb17d7a3822c6dc9855eb6bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/108b988aa5854805e1f0cb0e35f6e2eb501a77fb",
-                "reference": "108b988aa5854805e1f0cb0e35f6e2eb501a77fb",
+                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/221316c6e143696fbb17d7a3822c6dc9855eb6bd",
+                "reference": "221316c6e143696fbb17d7a3822c6dc9855eb6bd",
                 "shasum": ""
             },
             "require": {
                 "igorw/get-in": "^1.0",
                 "joshdifabio/composed": "^1.0",
-                "php": "^7.1",
-                "php-di-definitions/react-event-loop": "dev-master"
+                "php": "^7.1"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^4.1"
+                "api-clients/test-utilities": "^4.1",
+                "php-di-definitions/react-event-loop": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -634,39 +634,7 @@
                 }
             ],
             "description": "Async first Pusher client",
-            "time": "2018-05-12T19:04:24+00:00"
-        },
-        {
-            "name": "php-di-definitions/react-event-loop",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-DI-Definitions/reactphp-event-loop.git",
-                "reference": "090964077585b49a0eb897683c3c506daf276ac6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI-Definitions/reactphp-event-loop/zipball/090964077585b49a0eb897683c3c506daf276ac6",
-                "reference": "090964077585b49a0eb897683c3c506daf276ac6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1",
-                "react/event-loop": "^1.0 || ^0.5"
-            },
-            "require-dev": {
-                "api-clients/test-utilities": "^4.3"
-            },
-            "type": "library",
-            "extra": {
-                "php-di-definitions": {
-                    "di": [
-                        "src/event-loop.php"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2018-05-12T16:19:40+00:00"
+            "time": "2018-05-14T13:03:17+00:00"
         },
         {
             "name": "php-di/invoker",
@@ -956,47 +924,6 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
-        },
-        {
-            "name": "react/event-loop",
-            "version": "v0.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "e94985d93c689c554265b01014f8c3064921ca27"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/e94985d93c689c554265b01014f8c3064921ca27",
-                "reference": "e94985d93c689c554265b01014f8c3064921ca27",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8.35 || ^5.7 || ^6.4"
-            },
-            "suggest": {
-                "ext-event": "~1.0 for ExtEventLoop",
-                "ext-pcntl": "For signal handling support when using the StreamSelectLoop"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\EventLoop\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "ReactPHP's core reactor event loop that libraries can use for evented I/O.",
-            "keywords": [
-                "asynchronous",
-                "event-loop"
-            ],
-            "time": "2018-04-24T11:23:06+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
@@ -3724,8 +3651,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "php-di-definitions/definitions-gatherer": 20,
-        "php-di-definitions/react-event-loop": 20
+        "php-di-definitions/definitions-gatherer": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
