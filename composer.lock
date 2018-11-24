@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "dd32cc16172d668b5e7eb5bf116ad7fc",
@@ -54,16 +54,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.6.2",
+            "version": "3.6.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "9739f275edd4f97c2a50dc028d870ce51e7aa058"
+                "reference": "6a0b9c74710a56c5974d1c8229c7a91dac780402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/9739f275edd4f97c2a50dc028d870ce51e7aa058",
-                "reference": "9739f275edd4f97c2a50dc028d870ce51e7aa058",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/6a0b9c74710a56c5974d1c8229c7a91dac780402",
+                "reference": "6a0b9c74710a56c5974d1c8229c7a91dac780402",
                 "shasum": ""
             },
             "require": {
@@ -136,20 +136,20 @@
                 "rapid-development",
                 "validation"
             ],
-            "time": "2018-04-28T02:02:20+00:00"
+            "time": "2018-11-04T20:29:27+00:00"
         },
         {
             "name": "cakephp/chronos",
-            "version": "1.1.4",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/chronos.git",
-                "reference": "85bcaea6a832684b32ef54b2487b0c14a172e9e6"
+                "reference": "395110125ff577f080fa064dca5c5608a4e77ee1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/chronos/zipball/85bcaea6a832684b32ef54b2487b0c14a172e9e6",
-                "reference": "85bcaea6a832684b32ef54b2487b0c14a172e9e6",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/395110125ff577f080fa064dca5c5608a4e77ee1",
+                "reference": "395110125ff577f080fa064dca5c5608a4e77ee1",
                 "shasum": ""
             },
             "require": {
@@ -157,15 +157,15 @@
             },
             "require-dev": {
                 "athletic/athletic": "~0.1",
-                "cakephp/cakephp-codesniffer": "~2.3",
+                "cakephp/cakephp-codesniffer": "^3.0",
                 "phpbench/phpbench": "@dev",
                 "phpstan/phpstan": "^0.6.4",
-                "phpunit/phpunit": "<6.0"
+                "phpunit/phpunit": "<6.0 || ^7.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Cake\\Chronos\\": "src"
+                    "Cake\\Chronos\\": "src/"
                 },
                 "files": [
                     "src/carbon_compat.php"
@@ -193,7 +193,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-01-13T12:19:50+00:00"
+            "time": "2018-10-18T22:02:21+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -600,22 +600,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI-Definitions/definitions-gatherer.git",
-                "reference": "221316c6e143696fbb17d7a3822c6dc9855eb6bd"
+                "reference": "1e588e426c9473a92eb76d76df29150ae6d63f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/221316c6e143696fbb17d7a3822c6dc9855eb6bd",
-                "reference": "221316c6e143696fbb17d7a3822c6dc9855eb6bd",
+                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/1e588e426c9473a92eb76d76df29150ae6d63f11",
+                "reference": "1e588e426c9473a92eb76d76df29150ae6d63f11",
                 "shasum": ""
             },
             "require": {
-                "igorw/get-in": "^1.0",
-                "joshdifabio/composed": "^1.0",
-                "php": "^7.1"
+                "php": "^7.2",
+                "php-di-definitions/dummy": "^1.0",
+                "wyrihaximus/get-in-packages-composer.jason": "^1.0"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^4.1",
-                "php-di-definitions/react-event-loop": "dev-master"
+                "api-clients/test-utilities": "^5.0"
             },
             "type": "library",
             "autoload": {
@@ -633,8 +632,54 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "description": "Async first Pusher client",
-            "time": "2018-05-14T13:03:17+00:00"
+            "description": "Collect definition files from composer.json's",
+            "time": "2018-11-23T05:27:53+00:00"
+        },
+        {
+            "name": "php-di-definitions/dummy",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-DI-Definitions/dummy.git",
+                "reference": "e5e85f2796b6aebd94ae350b315220d7141ae3a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-DI-Definitions/dummy/zipball/e5e85f2796b6aebd94ae350b315220d7141ae3a7",
+                "reference": "e5e85f2796b6aebd94ae350b315220d7141ae3a7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "php-di-definitions": {
+                    "di": [
+                        "etc/di/dummy.php"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPDIDefinitions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "Dummy definition for testing",
+            "time": "2018-07-10T06:18:55+00:00"
         },
         {
             "name": "php-di/invoker",
@@ -880,16 +925,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
                 "shasum": ""
             },
             "require": {
@@ -923,7 +968,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2018-11-20T15:27:04+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
@@ -1034,17 +1079,59 @@
             "time": "2018-04-26T10:06:28+00:00"
         },
         {
-            "name": "zendframework/zend-diactoros",
-            "version": "1.7.1",
+            "name": "wyrihaximus/get-in-packages-composer.jason",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "bf26aff803a11c5cc8eb7c4878a702c403ec67f1"
+                "url": "https://github.com/WyriHaximus/php-get-in-packages-composer.json.git",
+                "reference": "5d42230dcacd8f30c2d5cb3dc9ed0fafb79aaaa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/bf26aff803a11c5cc8eb7c4878a702c403ec67f1",
-                "reference": "bf26aff803a11c5cc8eb7c4878a702c403ec67f1",
+                "url": "https://api.github.com/repos/WyriHaximus/php-get-in-packages-composer.json/zipball/5d42230dcacd8f30c2d5cb3dc9ed0fafb79aaaa8",
+                "reference": "5d42230dcacd8f30c2d5cb3dc9ed0fafb79aaaa8",
+                "shasum": ""
+            },
+            "require": {
+                "igorw/get-in": "^1.0",
+                "joshdifabio/composed": "^1.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com",
+                    "homepage": "http://wyrihaximus.net/"
+                }
+            ],
+            "description": "Functions around joshdifabio/composed and igorw/get-in to gather configuration from composer.json",
+            "time": "2018-06-19T20:43:13+00:00"
+        },
+        {
+            "name": "zendframework/zend-diactoros",
+            "version": "1.8.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-diactoros.git",
+                "reference": "20da13beba0dde8fb648be3cc19765732790f46e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/20da13beba0dde8fb648be3cc19765732790f46e",
+                "reference": "20da13beba0dde8fb648be3cc19765732790f46e",
                 "shasum": ""
             },
             "require": {
@@ -1057,17 +1144,29 @@
             "require-dev": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
-                "phpunit/phpunit": "^5.7.16 || ^6.0.8",
+                "php-http/psr7-integration-tests": "dev-master",
+                "phpunit/phpunit": "^5.7.16 || ^6.0.8 || ^7.2.7",
                 "zendframework/zend-coding-standard": "~1.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev",
-                    "dev-develop": "1.8.x-dev"
+                    "dev-master": "1.8.x-dev",
+                    "dev-develop": "1.9.x-dev",
+                    "dev-release-2.0": "2.0.x-dev"
                 }
             },
             "autoload": {
+                "files": [
+                    "src/functions/create_uploaded_file.php",
+                    "src/functions/marshal_headers_from_sapi.php",
+                    "src/functions/marshal_method_from_sapi.php",
+                    "src/functions/marshal_protocol_version_from_sapi.php",
+                    "src/functions/marshal_uri_from_sapi.php",
+                    "src/functions/normalize_server.php",
+                    "src/functions/normalize_uploaded_files.php",
+                    "src/functions/parse_cookie_header.php"
+                ],
                 "psr-4": {
                     "Zend\\Diactoros\\": "src/"
                 }
@@ -1083,7 +1182,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2018-02-26T15:44:50+00:00"
+            "time": "2018-09-05T19:29:37+00:00"
         }
     ],
     "packages-dev": [
