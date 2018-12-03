@@ -545,16 +545,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.0.1",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3"
+                "reference": "d0230c5c77a7e3cfa69446febf340978540958c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3",
-                "reference": "e4a54fa90a5cd8e8dd3fb4099942681731c5cdd3",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/d0230c5c77a7e3cfa69446febf340978540958c0",
+                "reference": "d0230c5c77a7e3cfa69446febf340978540958c0",
                 "shasum": ""
             },
             "require": {
@@ -570,7 +570,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -592,7 +592,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-03-25T17:35:16+00:00"
+            "time": "2018-10-10T09:24:14+00:00"
         },
         {
             "name": "php-di-definitions/definitions-gatherer",
@@ -600,12 +600,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI-Definitions/definitions-gatherer.git",
-                "reference": "1e588e426c9473a92eb76d76df29150ae6d63f11"
+                "reference": "6e4a860cf037a7ffde81152190c4878f87ad1d16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/1e588e426c9473a92eb76d76df29150ae6d63f11",
-                "reference": "1e588e426c9473a92eb76d76df29150ae6d63f11",
+                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/6e4a860cf037a7ffde81152190c4878f87ad1d16",
+                "reference": "6e4a860cf037a7ffde81152190c4878f87ad1d16",
                 "shasum": ""
             },
             "require": {
@@ -633,7 +633,7 @@
                 }
             ],
             "description": "Collect definition files from composer.json's",
-            "time": "2018-11-23T05:27:53+00:00"
+            "time": "2018-11-29T00:34:28+00:00"
         },
         {
             "name": "php-di-definitions/dummy",
@@ -726,16 +726,16 @@
         },
         {
             "name": "php-di/php-di",
-            "version": "6.0.2",
+            "version": "6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI/PHP-DI.git",
-                "reference": "71a7f2ed1e728138060ea159cbb1a92dc8620bd2"
+                "reference": "5e8b809960d5c3bfa096a90da9a78650e80b1f0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/71a7f2ed1e728138060ea159cbb1a92dc8620bd2",
-                "reference": "71a7f2ed1e728138060ea159cbb1a92dc8620bd2",
+                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/5e8b809960d5c3bfa096a90da9a78650e80b1f0e",
+                "reference": "5e8b809960d5c3bfa096a90da9a78650e80b1f0e",
                 "shasum": ""
             },
             "require": {
@@ -785,7 +785,7 @@
                 "ioc",
                 "psr11"
             ],
-            "time": "2018-04-23T06:54:40+00:00"
+            "time": "2018-09-17T15:34:44+00:00"
         },
         {
             "name": "php-di/phpdoc-reader",
@@ -972,16 +972,16 @@
         },
         {
             "name": "symfony/polyfill-php56",
-            "version": "v1.8.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php56.git",
-                "reference": "af98553c84912459db3f636329567809d639a8f6"
+                "reference": "ff208829fe1aa48ab9af356992bb7199fed551af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/af98553c84912459db3f636329567809d639a8f6",
-                "reference": "af98553c84912459db3f636329567809d639a8f6",
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/ff208829fe1aa48ab9af356992bb7199fed551af",
+                "reference": "ff208829fe1aa48ab9af356992bb7199fed551af",
                 "shasum": ""
             },
             "require": {
@@ -991,7 +991,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -1024,20 +1024,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-09-21T06:26:08+00:00"
         },
         {
             "name": "symfony/polyfill-util",
-            "version": "v1.8.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-util.git",
-                "reference": "1a5ad95d9436cbff3296034fe9f8d586dce3fb3a"
+                "reference": "3b58903eae668d348a7126f999b0da0f2f93611c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/1a5ad95d9436cbff3296034fe9f8d586dce3fb3a",
-                "reference": "1a5ad95d9436cbff3296034fe9f8d586dce3fb3a",
+                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/3b58903eae668d348a7126f999b0da0f2f93611c",
+                "reference": "3b58903eae668d348a7126f999b0da0f2f93611c",
                 "shasum": ""
             },
             "require": {
@@ -1046,7 +1046,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.8-dev"
+                    "dev-master": "1.9-dev"
                 }
             },
             "autoload": {
@@ -1076,7 +1076,7 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2018-04-26T10:06:28+00:00"
+            "time": "2018-09-30T16:36:12+00:00"
         },
         {
             "name": "wyrihaximus/get-in-packages-composer.jason",
