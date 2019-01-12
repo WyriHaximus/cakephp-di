@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd32cc16172d668b5e7eb5bf116ad7fc",
+    "content-hash": "56f36a2811c08e5b750dc5197cc6c1fb",
     "packages": [
         {
             "name": "aura/intl",
@@ -596,26 +596,25 @@
         },
         {
             "name": "php-di-definitions/definitions-gatherer",
-            "version": "dev-master",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI-Definitions/definitions-gatherer.git",
-                "reference": "221316c6e143696fbb17d7a3822c6dc9855eb6bd"
+                "reference": "5561e88fdd2df85ad7ca771e1e02c378fb8066d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/221316c6e143696fbb17d7a3822c6dc9855eb6bd",
-                "reference": "221316c6e143696fbb17d7a3822c6dc9855eb6bd",
+                "url": "https://api.github.com/repos/PHP-DI-Definitions/definitions-gatherer/zipball/5561e88fdd2df85ad7ca771e1e02c378fb8066d5",
+                "reference": "5561e88fdd2df85ad7ca771e1e02c378fb8066d5",
                 "shasum": ""
             },
             "require": {
-                "igorw/get-in": "^1.0",
-                "joshdifabio/composed": "^1.0",
-                "php": "^7.1"
+                "php": "^7.2",
+                "php-di-definitions/dummy": "^1.0",
+                "wyrihaximus/get-in-packages-composer.jason": "^1.0"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^4.1",
-                "php-di-definitions/react-event-loop": "dev-master"
+                "api-clients/test-utilities": "^5.0"
             },
             "type": "library",
             "autoload": {
@@ -633,8 +632,54 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "description": "Async first Pusher client",
-            "time": "2018-05-14T13:03:17+00:00"
+            "description": "Collect definition files from composer.json's",
+            "time": "2019-01-12T17:25:19+00:00"
+        },
+        {
+            "name": "php-di-definitions/dummy",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-DI-Definitions/dummy.git",
+                "reference": "c42f65bef7872580805d8a2a5905376ebb78d651"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-DI-Definitions/dummy/zipball/c42f65bef7872580805d8a2a5905376ebb78d651",
+                "reference": "c42f65bef7872580805d8a2a5905376ebb78d651",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "php-di-definitions": {
+                    "di": [
+                        "etc/di/*.php"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPDIDefinitions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "Dummy definition for testing",
+            "time": "2019-01-12T17:12:23+00:00"
         },
         {
             "name": "php-di/invoker",
@@ -1032,6 +1077,48 @@
                 "shim"
             ],
             "time": "2018-04-26T10:06:28+00:00"
+        },
+        {
+            "name": "wyrihaximus/get-in-packages-composer.jason",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WyriHaximus/php-get-in-packages-composer.json.git",
+                "reference": "8f65f3297fb9cf00803141e6e8b8c0926bf93998"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WyriHaximus/php-get-in-packages-composer.json/zipball/8f65f3297fb9cf00803141e6e8b8c0926bf93998",
+                "reference": "8f65f3297fb9cf00803141e6e8b8c0926bf93998",
+                "shasum": ""
+            },
+            "require": {
+                "igorw/get-in": "^1.0",
+                "joshdifabio/composed": "^1.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com",
+                    "homepage": "http://wyrihaximus.net/"
+                }
+            ],
+            "description": "Functions around joshdifabio/composed and igorw/get-in to gather configuration from composer.json",
+            "time": "2019-01-01T21:52:30+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -3650,9 +3737,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "php-di-definitions/definitions-gatherer": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
